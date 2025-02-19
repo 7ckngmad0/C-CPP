@@ -3,18 +3,18 @@
 
 int isPalindrome(const char *str) 
 {
-    int left = 0;
-    int right = strlen(str) - 1;
+    int start = 0;
+    int end = strlen(str) - 1;
 
-    while (left < right) {
-        if (str[left] != str[right]) 
+    while (start < end) {
+        if (str[start] != str[end]) 
         {
             return 0; 
         }
-        left++;
-        right--;
+        start++;
+        end--;
     }
-    return 1; 
+    return 1;   
 }
 
 int main() {
@@ -28,7 +28,8 @@ int main() {
     if (result) 
     {
         printf("1\n"); 
-    } else 
+    } 
+    else 
     {
         printf("0\n"); 
     }
